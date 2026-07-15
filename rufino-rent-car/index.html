@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08080A" />
+    <meta name="description" content="Rufino Rent Car — Sistema de gestão para locadora de veículos" />
+    <title>Rufino Rent Car · Gestão de Frota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html, body { background: #08080A; margin: 0; }
+      .boot-splash {
+        position: fixed; inset: 0; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 18px;
+        background: radial-gradient(circle at 50% 40%, #131317 0%, #08080A 70%);
+        z-index: 9999;
+      }
+      .boot-mark { animation: bootPulse 1.8s ease-in-out infinite; }
+      .boot-word {
+        font-family: 'Manrope', sans-serif; font-weight: 800; letter-spacing: 0.18em;
+        font-size: 13px; color: #F3F3F1; margin: 0; text-transform: uppercase;
+      }
+      .boot-word span { color: #C9A961; }
+      .boot-bar { width: 160px; height: 2px; background: #212127; border-radius: 999px; overflow: hidden; }
+      .boot-bar span {
+        display: block; width: 40%; height: 100%; background: linear-gradient(90deg, transparent, #C9A961, transparent);
+        animation: bootSlide 1.2s ease-in-out infinite;
+      }
+      @keyframes bootPulse { 0%, 100% { opacity: 0.55; transform: scale(0.96); } 50% { opacity: 1; transform: scale(1); } }
+      @keyframes bootSlide { 0% { transform: translateX(-120%); } 100% { transform: translateX(340%); } }
+    </style>
+  </head>
+  <body class="bg-ink-950 text-mist-50 antialiased">
+    <div id="root">
+      <div id="boot-splash" class="boot-splash">
+        <div class="boot-mark">
+          <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
+            <path d="M24 4 L42 14 V34 L24 44 L6 34 V14 Z" stroke="#C9A961" stroke-width="1.6" fill="none"/>
+            <path d="M24 12 L34 18 V30 L24 36 L14 30 V18 Z" fill="#C9A961" fill-opacity="0.12" stroke="#C9A961" stroke-width="1.2"/>
+            <path d="M17 24 L22 29 L31 19" stroke="#C9A961" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="boot-word">RUFINO <span>RENT CAR</span></p>
+        <div class="boot-bar"><span></span></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
